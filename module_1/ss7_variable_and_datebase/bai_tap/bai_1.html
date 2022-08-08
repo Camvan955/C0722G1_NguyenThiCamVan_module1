@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Điểm trung bình 3 môn</title>
+</head>
+<body>
+
+<script>
+    // điểm trung bình 3 môn
+    inputa = prompt("nhập điểm môn Toán");
+    inputab = prompt("nhập điểm môn Lí");
+    inputac = prompt("nhập điểm môn Hóa");
+    let a = parseInt(inputa);
+    let b = parseInt(inputab);
+    let c = parseInt(inputac);
+     tong = a + b + c;
+     DTB = (tong) / 3;
+
+    document.write('Tổng là:' + tong);
+    document.write('<br/>');
+    document.write( 'Điểm trung bình là:' + DTB);
+
+     // chuyển độ C sang độ F
+    inputd = prompt("nhập độ C cần chuyển đổi:");
+    let d = parseInt( inputd )
+    f = (9*d/5 + 32);
+
+    document.write('kết quả: ' + f );
+
+    // tính chu vi, diện tích hình tròn
+    inputr = prompt("nhập bán kính hình tròn:");
+    let r = parseFloat( inputr );
+    const pi=3.14;
+    cv = ( r*2*pi);
+    dt = (r*r*pi);
+    document.write('Chu vi hình tròn là:' + cv);
+    document.write("</br>");
+    document.write('Diện tích hình tròn: ' + dt);
+
+
+</script>
+</body>
+</html>

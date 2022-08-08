@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> Amount</th>
+        <th> From Curency</th>
+        <th> To Currency</th>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="dauvao"></td>
+        <td>
+            <select id="vao">
+                <option value="VND">VNĐ</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="ra">
+                <option value="VND">VNĐ</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="kq()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="abc">Result:</p>
+
+<script>
+    function kq() {
+        let giatridoi = document.getElementById('dauvao').value;
+        let vao = document.getElementById('vao').value;
+        let ra = document.getElementById('ra').value;
+        let abc;
+        if (vao == ra) {
+            abc = "Result: " + giatridoi;
+        }
+        if (vao == "VND" && ra == "USD") {
+            abc = "Result: " + (giatridoi / 230000) + " $";
+
+        }
+        if (vao == "USD" && ra == "VND") {
+            abc = "Result: " + (giatridoi * 23000) + " VNĐ";
+        }
+        document.getElementById("abc").innerHTML = (abc);
+    }
+</script>
+
+</body>
+</html>
