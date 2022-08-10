@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước doanh thu</title>
+</head>
+<body>
+<!--Viết chương trình tính cước điện thoại bàn cho một hộ gia đình với các thông số như sau:
+nếu 0-6000s: 10000đ/60s
+    10p< :8000đ/60s
+-->
+
+</body>
+<script>
+let time = +prompt("nhập vào số giây trong cuộc gọi:" )
+    if ( time <=6000) {
+        let cuoc = time*10000;
+        alert(cuoc + " đồng");
+    }
+    if (time >6000 ) {
+        let cuoc = time*8000;
+        alert(cuoc + 'đồng');
+    }
+
+
+</script>
+</html>
