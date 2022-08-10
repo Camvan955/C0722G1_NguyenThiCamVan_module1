@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phải tam giác hay không</title>
+</head>
+<body>
+<!--Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:-->
+
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+</body>
+<script>
+    let a = +prompt('nhập vào cạnh thứ nhất:');
+    let b = +prompt('nhập vào cạnh thứ hai:');
+    let c = +prompt('nhập vào cạnh thứ ba:');
+
+    if ((a > 0 && b > 0 && c > 0) && (a + b > c) && (b + c > a) && (a + c > b)) {
+        alert('ba số nhập vào là cạnh của tam giác');
+    }
+    else {
+        alert('ba cạnh nhập vào không phải là cạnh của một tam giác');
+    }
+
+
+</script>
+
+</html>

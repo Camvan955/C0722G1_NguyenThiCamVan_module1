@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<!--Bậc 1: 4 triệu đồng/tháng 0%;-->
+<!--Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;-->
+<!--Bậc 3: Trên 6 - 9 triệu đồng: 10%;-->
+<!--Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;-->
+<!--Bậc 5: trên 14 - 24 triệu đồng/tháng: 20%;-->
+<!--Bậc 6: Trên 24 - 44 triệu đồng/tháng: 25%;-->
+<!--Bậc 7: Trên 44 - 84 triệu đồng/tháng: 30%;-->
+<!--Bậc 8: Trên 84 triệu đồng: 35%.-->
+</body>
+<script>
+    let thuNhap = parseInt(prompt("Nhập thu nhập cần tính thuế:"));
+    if (thuNhap == 4000000) {
+        alert('Bạn không phải nộp thuế.');
+    } else if (thuNhap > 4000000 && thuNhap <= 6000000) {
+        alert('Số tiền thuế phải nộp là: ' + thuNhap * (5 / 100));
+    } else if (thuNhap > 6000000 && thuNhap <= 9000000) {
+        alert('Số tiền thuế phải nộp là: ' + thuNhap * (10 / 100));
+    } else if (thuNhap > 9000000 && thuNhap <= 14000000) {
+        alert('Số tiền thuế phải nộp là: ' + thuNhap * (15 / 100));
+    } else if (thuNhap > 14000000 && thuNhap <= 24000000) {
+        alert('Số tiền thuế phải nộp là: ' + thuNhap * (20 / 100));
+    } else if (thuNhap > 24000000 && thuNhap <= 84000000) {
+        alert('Số tiền thuế phải nộp là: ' + thuNhap * (25 / 100));
+    } else {
+        alert('Số tiền thuế phải nộp là: ' + thuNhap * (30 / 100));
+    }
+
+
+</script>
+</html>
