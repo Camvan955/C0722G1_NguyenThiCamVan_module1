@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1.-->
+<!--Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó.-->
+</body>
+<script>
+    let number;
+    let total = 0;
+
+
+    // cách 1:
+    do{
+        number = parseInt(prompt('Nhập vào 1 số: '));
+        alert('Giá trị bạn vừa nhập là: ' + number);
+        total += number;
+    }
+    while (number!==(-1));
+    alert('Tổng các số bạn vừa nhập là:' + total);
+
+
+    //Cách 2:
+    while (number != (-1)) {
+        number = parseInt(prompt("Nhập vào một số:"));
+        alert('Giá trị bạn vừa nhập là:' + number);
+        total += number;
+        alert('tổng các số vừa nhập vào là: ' + total);
+    }
+
+    //Bài 2: Viết chương hình hiển thị thẻ <hr> theo độ rộng từ 1 đến 100.
+
+    let i = 1;
+    while (i < 100) {
+        document.write("<hr width = " + i + "%>");
+        i++;
+    }
+</script>
+</html>
