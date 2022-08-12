@@ -8,9 +8,14 @@
 <!--Số tiền lãi = Số tiền gửi x lãi suất (%/năm) x số ngày thực gửi/360-->
 </body>
 <script>
-    let soTienGui = +prompt('Nhập số tiền gửi: ');
-    let laiXuat = +prompt('Nhập lãi xuất (%/năm): ');
-    let ngayGui = +prompt('Nhập số ngày thực gửi:');
-    alert('Số tiền lãi thu được là: ' + (soTienGui * laiXuat * (ngayGui / 360)));
+    let tienGui= +prompt ('Nhập số tiền gửi: ');
+    let thangGui= +prompt('Nhập số tháng gửi: ');
+    let laiSuatThang = +prompt('Nhập lãi suất tính theo tháng: ')
+    let tienLai;
+    for ( let i= 0; i < thangGui; i++ ) {
+        tienLai= tienGui * laiSuatThang/100;
+        tienGui= tienGui+ tienLai;
+    }
+    document.write('Số tiền nhận được: ' + tienGui);
 </script>
 </html>
