@@ -12,17 +12,18 @@
 </body>
 <script>
     let a = parseFloat(prompt('nhập doanh số bán hàng:'));
+    let hoaHong;
     if (a > 0 && a <= 2000000) {
-        let hoaHong = a * (2 / 100);
-        alert('hoa hồng nhận được là: ' + hoaHong);
+        hoaHong = a * (2 / 100);
+        alert('hoa hồng nhận được là: ' + hoaHong + "VNĐ");
     }
     if (a > 2000000 && a <= 5000000) {
-        let hoaHong = a * (5 / 100);
-        alert('hoa hồng nhận được là: ' + hoaHong);
+        hoaHong = a * (5 / 100);
+        alert('hoa hồng nhận được là: ' + hoaHong + "VNĐ");
     }
     if (a > 5000000) {
-        let hoaHong = a * (10 / 100);
-        alert('hoa hồng nhận được là: ' + hoaHong);
+        hoaHong = a * (10 / 100);
+        alert('hoa hồng nhận được là: ' + hoaHong + "VNĐ");
     }
 </script>
 </html>
