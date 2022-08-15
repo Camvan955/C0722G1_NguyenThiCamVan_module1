@@ -8,23 +8,37 @@
 <!--Trong phần này, chúng ta sẽ phát triển một ứng dụng cho phép hiển thị 20 số nguyên tố đầu tiên.-->
 </body>
 <script>
-    numbers = 20;
-    count = 0;
-    N = 2;
+    let n = 1;
+    // số nguyên tố
+    let count = 0;// số lượng số nguyên tố
+    while (count < 20) {
+        let giatri = 0;
+        for (let i = 1; i <= n; i++) {
 
-    while (count < numbers) {
-        let i = 0;
-        for (j = 2; j <N; j++) {
-            if (N % j == 0) {
-                i++;
+            if (n % i == 0) {
+                giatri += 1;
             }
         }
+        if (giatri == 2) {
+            document.write(n + '<br>');
+            count++;
+        }
+        n++;
+    }
 
-    if (i == 0) {
-        document.write(N + "<br>");
-        count++;
-    }
-    N++;
-    }
+    // while (count < numbers) {
+    //     let i = 0;
+    //     for (j = 2; j <N; j++) {
+    //         if (N % j == 0) {
+    //             i++;
+    //         }
+    //     }
+    //
+    // if (i == 0) {
+    //     document.write(N + "<br>");
+    //     count++;
+    // }
+    // N++;
+    // }
 </script>
 </html>
