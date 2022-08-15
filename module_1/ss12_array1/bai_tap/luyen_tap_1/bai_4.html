@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+</body>
+<script>
+    let numbers = [2, 8, 5, 7, 3, 5];
+    let len = numbers.length - 1;
+    for (let i = 0; i < len; i++) {
+        let dao = numbers[i];
+        numbers[i] = numbers[len - i];
+        numbers[len - i] = dao;
+    }
+    document.write(numbers);
+</script>
+</html>
