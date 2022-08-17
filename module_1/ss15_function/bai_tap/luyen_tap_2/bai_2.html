@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+</body>
+<script>
+    let PI = 3.14;
+    let radius = +prompt("Nhập bán kính của hình tròn: ");
+
+    function circleArea(radius) {
+        result1 = radius * radius * PI;
+        return result1;
+    }
+
+    function diameterOfACircle(radius) {
+        result2 = radius * 2 * PI;
+        return result2;
+    }
+
+    document.write("Chu vi của hình tròn là: " + diameterOfACircle(radius).toFixed(2) + "<br>");
+        document.write("Diện tích của hình tròn là: " + circleArea(radius).toFixed(2));
+
+
+</script>
+</html>
