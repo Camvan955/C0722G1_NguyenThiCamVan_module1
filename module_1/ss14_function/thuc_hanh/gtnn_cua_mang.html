@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function minArray(arr) {
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    document.write("Mảng 1 :" + arr1+ "<br>");
+    let min1 = minArray(arr1);
+    document.write("Giá trị nhỏ nhất của mảng 1 là: "+ min1+ "<br>");
+
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    document.write("Mảng 2 :" + arr2+ "<br>");
+    let min2 = minArray(arr2);
+    document.write("Giá trị nhỏ nhất của mảng 2 là: "+ min2 + "<br>");
+
+    let arr4 = [0, 0, 0, 0, 0, 0];
+    document.write("Mảng 4 :" + arr4+ "<br>");
+    let min4 = minArray(arr4);
+    document.write("Giá trị nhỏ nhất của mảng 1 là: "+ min4+ "<br>");
+
+
+    function minArray1(arr) {
+        if (arr3.length == 0)
+            return -1;
+        let min0 = arr[0];
+
+        for (let i = 1; i < arr3.length; i++) {
+            if (arr[i] < min0) {
+                min0 = arr[i];
+            }
+        }
+        return min0;
+    }
+
+    let arr3 = [];
+    document.write("Mảng 3: "+ arr +"<br>");
+    let min = minArray1(arr);
+   document.write("Hàm rỗng" + "<br>");
+
+
+
+</script>
+</body>
+</html>
