@@ -5,9 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<!--Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<!--Bài 5: Viết hàm nhập vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
 </body>
 <script>
-    
+    let num1 = +prompt("Nhập số thứ nhất: ")
+    let num2 = +prompt("Nhập số thứ hai: ")
+    let num3 = +prompt("Nhập số thứ ba: ")
+
+    function min(num1, num2, num3) {
+        if (num1 > num2 && num3 > num2) {
+            return num2;
+        }
+        if (num2 > num1 && num3 > num1) {
+            return num1;
+        }
+        if (num1 > num3 && num2 > num3) {
+            return num3;
+        }
+    }
+
+    alert("Số nguyên có giá trị nhỏ nhất là: " + min(num1, num2, num3));
+
 </script>
 </html>

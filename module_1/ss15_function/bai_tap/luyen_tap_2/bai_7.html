@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+</body>
+<script>
+    let num1 = +prompt("Nhập vào số thứ nhất: ");
+    let num2 = +prompt("Nhập vào số thứ hai: ");
+
+    function convert(num1, num2) {
+        let space = num1;
+        num1 = num2;
+        num2 = space;
+        return alert("Kết quả là: " + num1 + " và " + num2);
+    }
+
+    (convert(num1, num2));
+</script>
+</html>
