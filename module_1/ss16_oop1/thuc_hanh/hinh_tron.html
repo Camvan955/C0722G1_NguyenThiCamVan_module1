@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius = radius;
+        }
+
+        getScircle() {
+            return Math.PI * radius * radius;
+        }
+    }
+
+    let radius = +prompt("Nhập bán kính hình tròn: ");
+    let S = new Circle(radius);
+    alert("Chu vi hình tròn là: " + S.getScircle());
+</script>
+</body>
+</html>
