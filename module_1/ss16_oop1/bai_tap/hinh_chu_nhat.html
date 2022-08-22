@@ -15,19 +15,19 @@
         }
 
         getLong() {
-            return 'chiều dài là: ' + this.long + '<br>';
+            return this.long;
         }
 
         getWidth() {
-            return 'chiều rộng là: ' + this.width + '<br>';
+            return this.width;
         }
 
         getArea() {
-            return 'diện tích hình chữ nhật là: ' + this.long * this.width + '<br>';
+            return this.long * this.width;
         }
 
         getPrimeter() {
-            return 'chu vi hình chũ nhật là: ' + (this.long + this.width) * 2 + '<br>';
+            return (this.long + this.width) * 2;
         }
 
         setLong(long) {
@@ -41,11 +41,11 @@
     }
 
     let rectangle1 = new Rectangle(20, 5);
-    document.write(rectangle1.getLong());
-    document.write(rectangle1.getWidth());
-    document.write(rectangle1.getArea());
-    document.write(rectangle1.getPrimeter());
-
+    document.write("chiều dài hình chữ nhật là: " + rectangle1.getLong() + "<br>");
+    document.write("chiều rộng hình chữ nhật là: " + rectangle1.getWidth() + "<br>");
+    document.write("diện tích hình chữ nhật là: " + rectangle1.getArea() + "<br>");
+    document.write("chu vi hình chữ nhật là: " + rectangle1.getPrimeter());
 
 </script>
 </html>
+

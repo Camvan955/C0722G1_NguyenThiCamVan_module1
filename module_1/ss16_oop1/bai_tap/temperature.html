@@ -12,18 +12,18 @@
         }
 
         changeTempF() {
-            document.writeln('Độ F: ' + (9 / 5 * this.tempC + 32) + '<br>')
+            return (9 / 5 * this.tempC + 32);
         }
 
         changeTempK() {
-            document.writeln('Độ K: ' + (this.tempC + 273.15) + '<br>');
+            return (this.tempC + 273.15);
         }
 
     }
 
-    let Temperature1 = new Temperature(25);
-    Temperature1.changeTempF();
-    Temperature1.changeTempK();
+    let temperature1 = new Temperature(25);
+    document.write("kết quả là: " + temperature1.changeTempF() + "độ F <br>");
+    document.write("Kết quả là: " + temperature1.changeTempK() + "độ K");
 
 </script>
 </body>
