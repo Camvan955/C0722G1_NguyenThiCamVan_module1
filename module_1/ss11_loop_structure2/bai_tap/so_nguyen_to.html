@@ -8,23 +8,23 @@
 <!--Trong phần này, chúng ta sẽ phát triển một ứng dụng cho phép hiển thị 20 số nguyên tố đầu tiên.-->
 </body>
 <script>
-    let n = 1;
-    // số nguyên tố
-    let count = 0;// số lượng số nguyên tố
-    while (count < 20) {
-        let giatri = 0;
-        for (let i = 1; i <= n; i++) {
-
-            if (n % i == 0) {
-                giatri += 1;
-            }
-        }
-        if (giatri == 2) {
-            document.write(n + '<br>');
-            count++;
-        }
-        n++;
-    }
+    // let n = 1;
+    // // số nguyên tố
+    // let count = 0;// số lượng số nguyên tố
+    // while (count < 20) {
+    //     let giatri = 0;
+    //     for (let i = 1; i <= n; i++) {
+    //
+    //         if (n % i == 0) {
+    //             giatri += 1;
+    //         }
+    //     }
+    //     if (giatri == 2) {
+    //         document.write(n + '<br>');
+    //         count++;
+    //     }
+    //     n++;
+    // }
 
     // while (count < numbers) {
     //     let i = 0;
@@ -40,5 +40,32 @@
     // }
     // N++;
     // }
+    let number = +prompt("nhập số cần kiểm tra: ");
+
+    function Check(number) {
+        var check1 = true;
+        if (number < 2) {
+            check1 = false;
+        } else if (number == 2) {
+            check1 = true;
+        } else if (number % 2 == 0) {
+            check1 = false;
+        } else {
+            for (var i = 3; i < Math.sqrt(number); i += 2) {
+                if (number % i == 0) {
+                    check1 = false;
+                    break;
+                }
+            }
+        }
+
+        if (check1 == true) {
+            document.write(number + " là số nguyên tố <br/>");
+        } else {
+            document.write(number + " không phải là số nguyên tố <br/>");
+        }
+    }
+
+    Check(number);
 </script>
 </html>
