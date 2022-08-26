@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều-->
+</body>
+<script>
+    let mang = [[1, 2, 3, 4, 5], [6, 10, 8, 9, 6]];
+
+    function giaTriLonNhat(mang) {
+        let soLon = mang[0][0];
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (soLon < mang[i][j]) {
+                    soLon = mang[i][j];
+                }
+            }
+        }
+        return soLon;
+    }
+    function giaTriNhoNhat(mang) {
+        let soNho = mang[0][0];
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (soNho > mang[i][j]) {
+                    soNho = mang[i][j];
+                }
+            }
+        }
+        return soNho;
+    }
+    alert("Giá trị nhỏ nhất trong mảng là:" + giaTriNhoNhat(mang) + " .Giá trị lớn nhất trong mảng là: " + giaTriLonNhat(mang));
+</script>
+</html>

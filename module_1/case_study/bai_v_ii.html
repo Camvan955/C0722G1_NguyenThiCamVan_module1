@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.-->
+</body>
+<script>
+    let mang = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]];
+
+    function kiemTraSo(so) {
+        let count = 0;
+        if (so < 2) {
+            return false
+        } else {
+            for (let i = 2; i < so; i++) {
+                if (so % i == 0) {
+                    count ++;
+                }
+            }
+        }
+        if (count === 0) {
+            return true;
+        }
+    }
+
+    function kiemTraMang(mang) {
+        let count = 0;
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (kiemTraSo(mang[i][j]) === true) {
+                    document.write(mang[i][j] + "<br>");
+                    count++;
+                }
+            }
+        }
+        document.write("Các số nguyên tố là : " + count + "<br>")
+    }
+    kiemTraMang(mang);
+</script>
+</html>

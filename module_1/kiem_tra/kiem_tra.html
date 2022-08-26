@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--đề: Nhập một mảng số nguyên từ bàn phím với độ dài n. với các phần tử của mảng là một số nguyên lớn hơn 10 và nhỏ hơn 100-->
+<!--.hiển thị mảng sau khi thêm mới các phần tử.-->
+<!--viết chương trình hiển thị các phần tử của mảng có hàng đơn vị lớn hơn hàng chục ví dụ: -->
+<!--[11,12,21,56,19]==> kết quả: 12,56,19-->
+</body>
+<script>
+    let n = prompt(" nhập độ dài của mảng số nguyên: ");
+    let arr = new Array(n);
+    let arr1 = [];
+    let phanTu;
+    for (let i = 0; i < n; i++) {
+        do {
+            phanTu = +prompt("nhập vào phần tử thứ: " + (i))
+            if (phanTu < 10 || phanTu > 100) {
+                alert("số nhập vào không thỏa điều kiện!")
+            } else {
+                arr[i] = phanTu;
+            }
+        } while (phanTu < 10 || phanTu > 100)
+    }
+    alert("mảng mới khi thêm các phần tử là:" + arr);
+    for (let i = 0; i < arr.length; i++) {
+        let a = arr[i] % 10;
+        let b = Math.floor(arr[i] / 10);
+        if (a > b) {
+            arr1.push(arr[i]);
+        }
+    }
+    alert("Các phần tử của mảng có hàng đơn vị lớn hơn hàng chục là:" + arr1);
+
+</script>
+</html>

@@ -13,17 +13,20 @@
 <script>
     let s1 = prompt("Nhập chuỗi ký tự thứ nhất: ");
     let s2 = prompt("Nhập chuỗi kí tự thứ hai: ");
-    let kiTuChung = "";
-    arr1 = s1.split("");
-    arr2 = s2.split("");
 
-    for (let i = 0; i < arr2.length; i++) {
-        if (!arr2.includes(arr1[i])) {
-            arr1.splice(arr1[i],1);
-        }
+    let arr1 = s1.split("");
+    let arr2 = s2.split("");
+    let arr3 = [];
+    for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    arr3.push(arr1[i]);
+                    arr1.splice(i, 1);
+                    arr2.splice(j, 1);
+                }
+            }
     }
-    kiTuChung = arr1.length
-
-    alert(" Số lượng kí tự chung là: " + kiTuChung + " .Kí tự chung là: " + arr1);
+    alert(" Số lượng kí tự chung là: " + arr3.length + " .Kí tự chung là: " + arr3);
 </script>
 </html>
+

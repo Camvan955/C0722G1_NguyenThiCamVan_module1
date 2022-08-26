@@ -14,18 +14,37 @@
 
 </body>
 <script>
-    let str = prompt("Nhập vào chuỗi cần chuẩn hóa: ");
-    // let str1 = str.splice();
-    // let arr = [];
-    // alert(str1);
-    // alert("Xâu kí tự đã chuẩn hóa là: " + chuanHoa());
+    let str = prompt("Xâu cần chuẩn hóa là: ");
 
-    function chuanHoa(str) {
-         str=
+    function chuyenHoa(str) {
+        str = str.toLocaleLowerCase();
+        let str1 = str.split(" ");
+        let str2 = [];
         for (let i = 0; i < str1.length; i++) {
-            str1[i] == ' ';
+            if (str1[i] !== "") {
+                str2.push(str1[i].split(""));
+            }
+        }
+        for (let i = 0; i < str2.length; i++) {
+            str2[i][0] = str2[i][0].toLocaleUpperCase();
+            str2[i] = str2[i].join("");
+        }
+        return str2.join(" ");
+    }
+
+    function tuDaiNhat(str) {
+        let str1 = str.split("");
+        let tuDai=str[0][0];
+        for (let i = 0; i <str1.length ; i++) {
+            for (let j=0; j< str1[i].length; j++) {
+            tuDai >
+        }
+
         }
     }
+
+    alert("Xâu trước khi chuyển hóa là: " + str);
+    alert("Xâu sau khi chuyển hóa là: " + chuyenHoa(str));
 
 </script>
 </html>

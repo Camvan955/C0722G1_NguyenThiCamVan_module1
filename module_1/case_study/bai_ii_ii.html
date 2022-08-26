@@ -9,21 +9,25 @@
 <!--Ký tự là bất kỳ được nhập từ bàn phím. Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'-->
 <script>
     let character = prompt("Nhập vào kí tự cầm kiểm tra: ");
-    switch (character) {
-        case "o":
-        case "u":
-        case"i":
-        case"a":
-        case"e":
-        case"O":
-        case"U":
-        case"I":
-        case"A":
-        case"E":
-            alert(" Kí tự nhập vào là nguyên âm!");
-            break;
-        default:
-            alert(" Kí tự nhập vào là phụ âm.");
+    if (!isNaN(character)) {
+        alert("đây không phỉa là kí tự trong bảng chữ cái!");
+    } else {
+        switch (character) {
+            case "o":
+            case "u":
+            case"i":
+            case"a":
+            case"e":
+            case"O":
+            case"U":
+            case"I":
+            case"A":
+            case"E":
+                alert(" Kí tự nhập vào là nguyên âm!");
+                break;
+            default:
+                alert(" Kí tự nhập vào là phụ âm.");
+        }
     }
 
 </script>

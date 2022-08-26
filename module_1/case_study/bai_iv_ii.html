@@ -12,20 +12,32 @@
 </body>
 <script>
     let s1 = prompt("Nhập chuỗi ký tự : ");
-    let dem = 0;
     let arr = s1.split("");
+    //let dem = 0;
+    // Cách1:
+    let arr1=[];
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i] === arr[j]) {
-                dem++;
-            }
+        if(arr1.indexOf(arr[i])=== -1) {
+            arr1.push(arr[i]);
         }
-        if (dem > 1) {
-            arr.splice(i, 1);
-            i--;
-        }
-        dem = 0;
     }
-    alert(" Số lượng kí tự khác là: " + arr.length + ". Các kí tự khác nhau trong chuỗi là: " + arr.toString());
+    alert(" Số lượng kí tự khác là: " + arr1.length + ". Các kí tự khác nhau trong chuỗi là: " + arr1.toString());
+
+
+
+    // Cách 2:
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arr.length; j++) {
+    //         if (arr[i] === arr[j]) {
+    //             dem++;
+    //         }
+    //     }
+    //     if (dem > 1) {
+    //         arr.splice(i, 1);
+    //         i--;
+    //     }
+    //     dem = 0;
+    // }
+    //alert(" Số lượng kí tự khác là: " + arr.length + ". Các kí tự khác nhau trong chuỗi là: " + arr.toString());
 </script>
 </html>
