@@ -16,7 +16,7 @@
 <script>
     let str = prompt("Xâu cần chuẩn hóa là: ");
 
-    function chuyenHoa(str) {
+    function chuanHoa(str) {
         str = str.toLocaleLowerCase();
         let str1 = str.split(" ");
         let str2 = [];
@@ -32,19 +32,19 @@
         return str2.join(" ");
     }
 
-    function tuDaiNhat(str) {
-        let str1 = str.split("");
-        let tuDai=str[0][0];
-        for (let i = 0; i <str1.length ; i++) {
-            for (let j=0; j< str1[i].length; j++) {
-            tuDai >
+    function demKyTu(str2) {
+        str2 = str2.split(" ");
+        let doDaiLonNhat = str2[0];
+        for (let i = 0; i < str2.length; i++) {
+            if (str2[i].length > doDaiLonNhat.length) {
+                doDaiLonNhat = str2[i];
+            }
         }
-
-        }
+        return doDaiLonNhat;
     }
 
     alert("Xâu trước khi chuyển hóa là: " + str);
-    alert("Xâu sau khi chuyển hóa là: " + chuyenHoa(str));
+    alert("Xâu sau khi chuyển hóa là: " + chuanHoa(str) + ". Từ dài nhất xâu là: " + demKyTu(str));
 
 </script>
 </html>
