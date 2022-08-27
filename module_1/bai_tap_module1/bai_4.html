@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Câu 4: Tạo một lớp Máy tính có:-->
+<!-- - Thuộc tính:-->
+<!--+ Mã máy (string)-->
+<!--+ Tên máy(string)-->
+<!--+ Tên Hãng sản xuất (string)-->
+<!--+ Giá bán (number).-->
+<!-- - Các phương thức getter và setter cho các thuộc tính-->
+<!-- - Phương thức toString() : phương thức lấy các thông tin của đối tượng.-->
+<!-- -Yêu cầu: Viết chương trình quản lý Máy tính với các chức năng sau;-->
+<!--+ Thêm mới 1 máy tính-->
+<!--+ Hiển thị được danh sách máytinhs-->
+</body>
+<input type="text" id="maMay" placeholder="nhập mã máy">
+<input type="text" id="tenMay" placeholder="nhập tên máy">
+<input type="text" id="tenHangSanXuat" placeholder="nhập tên hãng sản xuất">
+<input type="text" id="giaBan" placeholder="nhập giá bán">
+<input type="button" onclick="addNewMayTinh()" value="Thêm máy tính">
+<p id="display"></p>
+<script>
+    class MayTinh {
+        constructor(maMay, tenMay, tenHangSanXuat, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHangSanXuat = tenHangSanXuat;
+            this.giaBan = giaBan;
+        }
+
+        setmaMay(maMay) {
+            this.maMay = maMay;
+        }
+
+        settenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        settenHangSanXuat(tenHangSanXuat) {
+            this.tenHangSanXuat = tenHangSanXuat;
+        }
+
+        setgiaBan(giaBan) {
+            this.giaBan = giaBan;
+        }
+
+        getmaMay() {
+            return this.maMay;
+        }
+
+        gettenMay() {
+            return this.tenMay;
+        }
+
+        gettenHangSanXuat() {
+            return this.tenHangSanXuat;
+        }
+
+        getgiaBan() {
+            return this.giaBan;
+        }
+    }
+
+    let mayTinh1 = new MayTinh(1, "Asus VivoBook", "Asuz", 18000000)
+    let mayTinh2 = new MayTinh(2, "Asus a123", "Asuz", 16000000)
+    let mayTinhList = [mayTinh1, mayTinh2];
+    display(mayTinhList);
+
+    // hiện thị danh sách
+    function display(list) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Stt</th>\n' +
+            '        <th>Mã máy</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Tên hãng sản xuất</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '        <th colspan="2"></th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getmaMay() + '</td>\n' +
+                '        <td>' + list[i].gettenMay() + '</td>\n' +
+                '        <td>' + list[i].gettenHangSanXuat() + '</td>\n' +
+                '        <td>' + list[i].getgiaBan() + '</td>\n' +
+                '        <td><input type="button" onclick="editMayTinhById(' + i + ')" value="Edit"></td>\n' +
+                '    </tr>';
+        }
+
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+
+    function editMayTinhById(index) {
+        let editmaMay = prompt("nhập mã máy mới:" + mayTinhList[index].getmaMay());
+        let edittenMay = prompt("nhập tên máy mới:");
+        let edittenHangSanXuat = prompt("nhập tên hãng sản xuất mới:");
+        let editgiaBan = prompt("nhập giá bán mới:");
+        mayTinhList[index].setmaMay(editmaMay);
+        mayTinhList[index].settenMay(edittenMay);
+        mayTinhList[index].settenHangSanXuat(edittenHangSanXuat);
+        mayTinhList[index].setgiaBan(editgiaBan);
+        display(mayTinhList);
+
+    }
+
+    function addNewMayTinh() {
+        let maMay = document.getElementById("maMay").value;
+        let tenMay = document.getElementById("tenMay").value;
+        let tenHangSanXuat = document.getElementById("tenHangSanXuat").value;
+        let giaBan = document.getElementById("giaBan").value;
+        let newMayTinh = new MayTinh(maMay, tenMay, tenHangSanXuat, giaBan);
+        mayTinhList.push(newMayTinh);
+        display(mayTinhList);
+        document.getElementById("maMay").value = "";
+        document.getElementById("tenMay").value = "";
+        document.getElementById("tenHangSanXuat").value = "";
+        document.getElementById("giaBan").value = "";
+
+    }
+
+</script>
+</html>

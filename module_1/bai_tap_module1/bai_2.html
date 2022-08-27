@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một cụm từ viết tắt-->
+<!-- - Nếu chuỗi có nhiều hơn hoặc bằng 2 từ trở lên thì hàm sẽ trả về 1 cụm từ viết tắt-->
+<!--là lấy các ký tự đầu tiên của từng từ và đổi sang in hoa.-->
+<!--Ví dụ: object Oriented programming =&gt; kết quả trả về :OOP-->
+<!-- - Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo "Chuỗi chỉ có 1-->
+<!--từ nên không cần viết tắc"-->
+<!-- - Ví du: ObjectOriented =&gt; chuỗi này chỉ được tính chỉ có 1 từ-->
+<!--Lưu ý : Các từ được xác định bởi 1 hoặc nhiều cách;-->
+</body>
+<script>
+    let str = prompt("Nhập vào một chuỗi các kí tự: ");
+    let sub = " ";
+
+    function convert(str) {
+        let arr = str.split(" ");
+        if ((str.split(sub).length - 1) === 0) {
+           return ". Chuỗi chỉ có 1 từ nên không cần viết tắt";
+        } else {
+           let arr1=[];
+            for (let i = 0; i < arr.length; i++) {
+                arr1.push(arr[i].charAt(0).toUpperCase());
+
+            }
+            return arr1.join("");
+        }
+    }
+
+    alert(str + convert(str));
+
+
+</script>
+</html>

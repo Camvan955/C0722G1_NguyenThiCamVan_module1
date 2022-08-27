@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50).-->
+<!--hiển thị ra màn hình các phần tử của mảng, hiển thị giá trị trung bình của các phần tử chia hết cho 5 ở vị trí thứ 3-->
+<script>
+    let size = prompt("Nhập độ dài của mảng số nguyên");
+    let arr = [];
+    let count = 0;
+    let dem = 0;
+    let average;
+    if (size <= 50) {
+        for (let i = 0; i <= size; i++) {
+            arr[i] = +prompt("nhập vào phần tử thứ: " + (i))
+        }
+    } else {
+        alert("Nhập lại độ dài của mảng!")
+    }
+    for (let i = 0; i < arr.length; i = i + 3) {
+        if (arr[i] % 5 === 0) {
+            count += arr[i];
+            dem += 1;
+        }
+        average = count / dem;
+    }
+    alert("Các phần tử của mảng là: "+ arr);
+    alert("Giá trị trung bình của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 là: " + average);
+</script>
+</body>
+</html>
