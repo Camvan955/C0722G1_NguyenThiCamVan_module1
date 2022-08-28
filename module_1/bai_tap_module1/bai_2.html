@@ -16,14 +16,13 @@
 </body>
 <script>
     let str = prompt("Nhập vào một chuỗi các kí tự: ");
-    let sub = " ";
 
     function convert(str) {
         let arr = str.split(" ");
-        if ((str.split(sub).length - 1) === 0) {
-           return ". Chuỗi chỉ có 1 từ nên không cần viết tắt";
+        if (arr.length === 1) {
+            return "Chuỗi chỉ có 1 từ nên không cần viết tắt";
         } else {
-           let arr1=[];
+            let arr1 = [];
             for (let i = 0; i < arr.length; i++) {
                 arr1.push(arr[i].charAt(0).toUpperCase());
 
@@ -32,7 +31,7 @@
         }
     }
 
-    alert(str + convert(str));
+    alert( convert(str));
 
 
 </script>
