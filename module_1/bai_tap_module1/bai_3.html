@@ -10,14 +10,47 @@
 <!--trong mảng ( Yêu cầu sắp xếp tăng dần).-->
 <!--Gợi ý đây là dãy số fibonaci: 0,1,1,2,3,5,8,13,21,…..-->
 <script>
-    let size= prompt("Nhập độ dài của mảng: ");
-    let arr=[];
-    for (let i = 0; i <size ; i++) {
-        arr[i]= prompt("Nhập phần tử thứ " + (i+1));
+    let arr = [1, 5, 6, 13, 9, 12, 8, 8, 8, 8, 0, 5, 1];
+    let arr1 = [];
+    let arr2 = [];
+
+    function fibonaci(number) {
+        let number1 = 0;
+        let number2 = 1;
+        let soFibonacci = 0;
+        for (let i = 0; number1 <= number; i++) {
+            arr1.push(number1);
+            soFibonacci = number1 + number2;
+            number1 = number2;
+            number2 = soFibonacci;
+        }
+        return arr1;
     }
-    alert("Mảng vừa nhập là: " + arr);
 
+    alert(" Dãy số fibonacci từ O đến số lớn nhất trong mảng vừa nhập là: " + fibonaci(max(arr)));
 
+    function checkFibonacci(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr1.includes(arr[i])) {
+                arr2.push(arr[i]);
+            }
+        }
+        return arr2;
+    }
+
+    checkFibonacci(arr).sort(function (a, b) {
+        return a - b;
+    });
+    document.write("Các số fibonacci có trong mảng: " + arr2);
+
+    function max(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max <= arr[i]) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
 </script>
 </body>
-</html>

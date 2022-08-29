@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy số dạng sóng</title>
+</head>
+<body>
+<!--viết chương trình nhập vào 1 mảng (với n<50). kiểm tra mảng vừa nhập có phải dạng sóng hay không?-->
+<script>
+    // let arr = [1, 5, 2, 1, 3, 4, 5];
+    let arr = [];
+    do {
+        size = +prompt("Nhập chiều dài mảng: ");
+    } while (size > 50);
+    for (let i = 0; i < size; i++) {
+        element = +prompt("Nhập phần tử thứ: " + (i + 1));
+        arr.push(element);
+    }
+
+    function check(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length - 2; i++) {
+            if ((arr[i + 1] - arr[i] > 0) && (arr[i + 1] - arr[i + 2] > 0)
+                || (arr[i] - arr[i + 1] > 0) && (arr[i + 1] - arr[i + 2] < 0)) {
+                count = 1;
+            } else {
+                count = 0;
+                break;
+            }
+        }
+
+        if (count === 1) {
+          return "dạng sóng";
+        } else {
+           return "không là dạng sóng";
+
+        }
+    }
+
+    alert("mảng nhập vào là: " + arr +". là " + check(arr));
+
+</script>
+</body>
+</html>

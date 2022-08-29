@@ -73,6 +73,7 @@
     let mayTinh2 = new MayTinh(2, "Asus a123", "Asus", 16000000)
     let mayTinh3 = new MayTinh(3, "Dell latitude", "Dell", 17000000)
     let mayTinhList = [mayTinh1, mayTinh2, mayTinh3];
+    sort();
     display(mayTinhList);
 
     // hiện thị danh sách
@@ -111,7 +112,6 @@
         mayTinhList[index].setTenHang(editTenHang);
         mayTinhList[index].setGiaBan(editGiaBan);
         display(mayTinhList);
-
     }
 
     function addNewMayTinh() {
@@ -121,13 +121,31 @@
         let giaBan = document.getElementById("giaBan").value;
         let newMayTinh = new MayTinh(maMay, tenMay, tenHang, giaBan);
         mayTinhList.push(newMayTinh);
+        sort();
         display(mayTinhList);
         document.getElementById("maMay").value = "";
         document.getElementById("tenMay").value = "";
         document.getElementById("tenHang").value = "";
         document.getElementById("giaBan").value = "";
-
     }
 
+    function sort() {
+
+        for (let i = 0; i < mayTinhList.length; i++) {
+            let max = 0;
+            let index = 0;
+            for (let j = i; j < mayTinhList.length; j++) {
+                if (max <= mayTinhList[j].giaBan) {
+                    max = mayTinhList[j].giaBan;
+                    index = j;
+                }
+            }
+            let temp = mayTinhList[i];
+            mayTinhList[i] = mayTinhList[index];
+            mayTinhList[index] = temp;
+
+        }
+    }
+    display(mayTinhList);
 </script>
 </html>

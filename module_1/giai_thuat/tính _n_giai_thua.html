@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N giai thừa</title>
+</head>
+<body>
+<!--viết hàm tính giai thừa với n là số nhập vào với hai trường hợp n chẵn, n lẻ-->
+<script>
+    let n= +prompt ("Nhập vào số n cần tính gia thừa: ")
+    let giaiThua=1;
+    function giaiThuaChan(n) {
+        for (let i = 2; i <=n ; i+=2) {
+                giaiThua=giaiThua*i;
+        }
+        return giaiThua;
+    }
+
+    function giaiThuaLe(n) {
+        for (let i = 1; i <= n ; i+=2) {
+            giaiThua=giaiThua*i;
+        }
+        return giaiThua;
+    }
+    alert(giaiThuaChan(n));
+    alert(giaiThuaLe(n));
+
+</script>
+</body>
+</html>
